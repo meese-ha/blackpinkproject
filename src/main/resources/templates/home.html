@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+#main{
+	position: relative; 
+ 	top: 170px; 
+  	left: 520px;
+  	
+}
+
+.letter{
+ 	position:relative;
+ 	width:500px;
+ 	height:500px;
+ 	bottom:340px;
+	left:930px;
+ 	
+ 	
+} 
+
+#doyou{
+	position: absolute;
+	top:10px;
+	right:230px;
+
+
+}
+
+#want{
+	position: absolute;
+	top:90px;
+	right:30px;
+
+}
+
+#know{
+	position: absolute;
+	top:190px;
+	right:230px;
+	
+}
+
+#them{
+	position: absolute;
+	top:280px;
+	right:80px;
+	
+}
+
+#yes{
+	position:absolute;
+	top:450px;
+	right:100px;
+	width:100px;
+	height: 30px;
+	font-size:25px;
+	cursor: pointer;
+	text-decoration: none;
+	color: black;
+}
+ 
+
+</style>
+</head>
+<body>
+<img th:src="@{/img/main.jpg}" id="main">
+<div class="letter">
+<img th:Src="@{/img/doyou.png}" id="doyou">
+<img th:Src="@{/img/wantto.png}" id="want">
+<img th:Src="@{/img/know.png}" id="know">
+<img th:Src="@{/img/them.png}" id="them">
+ <a th:href="@{/hello}" id="yes" >yes</a>  
+</div>
+
+</body>
+</html>

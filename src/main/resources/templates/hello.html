@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+
+
+
+#menu{
+	position:relative;
+	top:100px;
+	width:60%;
+	height: 50px;
+	float:left;
+	
+}
+
+#menu2{
+	position:relative;
+	top:100px;
+	float:right;
+	width:30%;
+	height: 50px;
+	
+}
+
+#menu ul li{
+	/* 왼족부터 가로 정렬*/
+	float: left;
+	/* li항목의 갯수에 따라 등분*/
+	width: 30%;
+	/* float해체를 위한 세로 사이즈 지정*/
+	height: 100%;
+	/* 텍스트 중앙 정렬*/
+	line-height: 50px;
+	/* 텍스트 가운데 정렬*/
+	text-align: center;
+	
+}
+
+#menu2 ul li{
+	/* 왼족부터 가로 정렬*/
+	float: right;
+	/* li항목의 갯수에 따라 등분*/
+	width: 30%;
+	/* float해체를 위한 세로 사이즈 지정*/
+	height: 100%;
+	/* 텍스트 중앙 정렬*/
+	line-height: 50px;
+	/* 텍스트 가운데 정렬*/
+	text-align: center;
+	
+}
+
+a{
+	text-decoration: none;
+	color: black;
+	
+}
+
+li{
+	list-style: none;
+	
+}
+
+.blackpink{
+	position: relative;
+	top:150px;
+	left:50px;
+	width: 1700px;
+	height: 600px;	
+
+}
+
+
+.first{
+	position: absolute;
+	top:80px;
+	left:50px;
+	text-align: center;
+}
+
+
+p{
+	opacity: 0;
+	
+}
+
+
+.first:hover #pic{
+	opacity: 0.5;
+	transition: 0.5s;
+}
+
+.first:hover p{
+	opacity: 1;
+	
+}
+
+#text-1{
+	position:absolute;
+	top:170px;
+	left:40px;
+
+}
+
+#jennie{
+	width:300px;
+	height:500px;
+	
+}
+
+.second{
+	text-align: center;
+	position: absolute;
+	top:30px;
+	left:450px;
+
+}
+
+.second:hover #pic{
+	opacity: 0.5;
+	transition: 0.5s;
+}
+
+.second:hover p{
+	opacity: 1;
+	
+}
+
+#text-2{
+	position:absolute;
+	top:100px;
+	left:220px;
+
+}
+
+#rose{
+	width:300px;
+	height:500px;
+	
+}
+
+.third{
+	text-align: center;
+	position: absolute;
+	top:80px;
+	left:850px;
+
+}
+
+.third:hover #pic{
+	opacity: 0.5;
+	transition: 0.5s;
+}
+
+.third:hover p{
+	opacity: 1;
+	
+}
+
+#text-3{
+	position:absolute;
+	top:170px;
+	left:250px;
+
+}
+
+#lisa{
+	width:350px;
+	height:500px;
+	
+}
+
+.four{
+	text-align: center;
+	position: absolute;
+	top:30px;
+	left:1300px;
+
+}
+
+.four:hover #pic{
+	opacity: 0.5;
+	transition: 0.5s;
+}
+
+.four:hover p{
+	opacity: 1;
+	
+}
+
+#text-4{
+	position:absolute;
+	top:20px;
+	left:220px;
+
+}
+
+#jisoo{
+	width:300px;
+	height:500px;
+	
+}
+
+</style>
+</head>
+<body>
+<div id="menu">
+	<ul>
+		<li><a th:href="@{/blackpink}" >blackpink</a></li>
+		<li><a th:href="@{/album/albummain}" >album</a></li>
+		<li><a th:href="@{/lookbook/lookbookmain}" >lookbook</a></li>
+	</ul>
+</div>
+<div id="menu2">
+	<ul>
+		<li><a th:href="@{/together/join}" >Join</a></li>
+		<li><a th:href="@{/together/login}" >Login</a></li>
+	</ul>
+</div>
+<div class="blackpink">
+	<div class="first">
+		<div id="text-1">
+			<p>Jennie</p><br><br> 
+		</div>
+		<div id="pic">
+			<a th:href="@{/meminfo/jennie}"><img th:src="@{img/제니.jpg}" id="jennie" ></a>
+		</div>
+	</div>
+	<div class="second" >
+		<div id="pic">
+			<a th:href="@{/meminfo/rose}"><img th:src="@{img/로제.jpg}"  id="rose"></a>
+		</div>
+		<div id="text-2">	
+			<p>Rose</p>
+		</div>
+	</div>
+	<div class="third">
+		<div id="text-3">
+			<p>Lisa<p>
+		</div>
+		<div id="pic">
+			<a th:href="@{/meminfo/lisa}"><img th:src="@{img/리사.jpg}" id="lisa" ></a>
+		</div>
+	</div>
+	<div class="four">
+		<div id="pic">
+			<a th:href="@{/meminfo/jisoo}"><img th:src="@{img/지수.jpg}" id="jisoo" ></a>
+		</div>
+		<div id="text-4">
+			<p>Jisoo</p>
+		</div>
+	</div>
+</div>	
+</body>
+</html>
